@@ -6,6 +6,6 @@ COPY . /
 RUN ["chmod", "+x", "/entrypoint.sh"]
 # Update the apk and download openssh
 RUN ["apk", "update"]
-RUN ["apk", "add", "git", "openssh"]
+RUN ["apk", "add", "git", "openssh","sshpass"]
 # Runs the script.
 ENTRYPOINT [ "/entrypoint.sh" ]
